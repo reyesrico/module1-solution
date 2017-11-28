@@ -12,6 +12,14 @@
       font-size: 1.3em;
       font-weight: bold;
     }
+
+    .green {
+      border: solid 1px green;
+    }
+
+    .red {
+      border: solid 1px red;
+    }
   </style>
 </head>
 
@@ -21,13 +29,13 @@
 
     <div class="form-group">
       <input id="lunch-menu" type="text" placeholder="list comma separated dishes you usually have for lunch" class="form-control"
-        ng-model="food">
+        ng-model="food" ng-class="fclass">
     </div>
     <div class="form-group">
       <button class="btn btn-default" ng-click="checkTooMuch()">Check If Too Much</button>
     </div>
     <div class="form-group message">
-      {{result}}
+      <div ng-class="class">{{result}}</div>
     </div>
   </div>
 
